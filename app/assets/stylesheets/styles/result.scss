@@ -29,6 +29,12 @@
     margin-bottom: 25px;
   }
 
+  .dependency-list {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  }
+
   h2 {
     margin-top: 0px;
     margin-bottom: 10px;

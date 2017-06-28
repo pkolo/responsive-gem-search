@@ -12,20 +12,21 @@
     </div>
     <div class="result-dependencies">
       <h2>Dependencies</h2>
+      <div class="dependency-list">
+        <% @result["dependencies"]["development"].each do |dependency| %>
+          <div class="result dependency">
+            <div class="result-link"><%= dependency["name"] %></div>
+            <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
+          </div>
+        <% end %>
 
-      <% @result["dependencies"]["development"].each do |dependency| %>
-        <div class="result dependency">
-          <div class="result-link"><%= dependency["name"] %></div>
-          <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
-        </div>
-      <% end %>
-
-      <% @result["dependencies"]["runtime"].each do |dependency| %>
-        <div class="result dependency">
-          <div class="result-link"><%= dependency["name"] %></div>
-          <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
-        </div>
-      <% end %>
+        <% @result["dependencies"]["runtime"].each do |dependency| %>
+          <div class="result dependency">
+            <div class="result-link"><%= dependency["name"] %></div>
+            <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
+          </div>
+        <% end %>
+      </div>
 
     </div>
   </div>
