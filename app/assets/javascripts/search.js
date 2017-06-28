@@ -10,6 +10,7 @@ $(document).ready(function() {
       method: 'POST',
       data: `q=${q}`
     }).done(function(res) {
+      $('.result-wrapper').remove()
       $('.search-wrapper').append(res)
     });
   });
