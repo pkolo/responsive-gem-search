@@ -1,0 +1,33 @@
+$offset-pad: 50px;
+
+.search-wrapper {
+
+  > * {
+    padding-left: $offset-pad;
+  }
+
+  .search-bar {
+    max-width: 80%;
+    border: 1px solid $mid-gray;
+    border-radius: 100px;
+    margin: 35px 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: $offset-pad;
+
+    .search-field {
+      width: 90%;
+    }
+
+    input {
+      border: none;
+      font-size: 1em;
+      color: $mid-gray;
+    }
+
+    .search-btn {
+      float:right;
+      text-align: right;
+    }
+  }
+}
