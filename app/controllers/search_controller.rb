@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def create
-    "hey there"
+    render html: params[:q]
   end
 
 end
