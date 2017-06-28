@@ -16,10 +16,17 @@
 
 // Overall styles
 body {
+  max-width: 1600px;
   font-family: $sans;
   color: $gray;
 }
 
 .site-main {
   border: 1px solid black;
+}
+
+.main-wrapper {
+  width: 80%;
+  margin-left: 60px;
+  padding-top: 200px;
 }
