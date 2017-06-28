@@ -44,3 +44,13 @@
     color: $light-gray;
   }
 }
+
+.result-error {
+  margin-top: 20px;
+  max-width: 80%;
+  text-align: center;
+  color: $error-red;
+  font-size: 1.5em;
+  line-height: 1.6em;
+  letter-spacing: 0.04em;
+}
