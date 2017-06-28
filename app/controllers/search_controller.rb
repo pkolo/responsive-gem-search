@@ -5,7 +5,7 @@ class SearchController < ApplicationController
     search_results = Gems.search q
 
     # Finds exact match
-    @result = search_results.find { |result| result["name"] == q }
+    @result = search_results.find { |result| result["name"].downcase == q }
 
     if @result
       render partial: 'result'

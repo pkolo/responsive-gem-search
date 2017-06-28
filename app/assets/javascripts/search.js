@@ -10,7 +10,7 @@ $(document).ready(function() {
       method: 'POST',
       data: `q=${q}`
     }).done(function(res) {
-      console.log(res)
+      $('.search-wrapper').append(res)
     });
   });
 
