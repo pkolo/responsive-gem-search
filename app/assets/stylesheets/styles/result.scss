@@ -1,0 +1,46 @@
+.result-wrapper {
+  > * {
+    margin-bottom: 30px;
+  }
+}
+
+.result {
+  > * {
+    display: inline-block;
+  }
+
+  &.dependency {
+    margin-bottom: 10px;
+  }
+}
+
+.result-link {
+  font-size: 1.25em;
+  letter-spacing: 0.5px;
+  margin-right:5px;
+
+  a {
+     color: $blue;
+  }
+}
+
+.result-details {
+  line-height: 1.5em;
+  letter-spacing: 0.03em;
+
+  > * {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $light-gray;
+  }
+}
