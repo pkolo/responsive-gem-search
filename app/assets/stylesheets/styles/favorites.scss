@@ -1,0 +1,21 @@
+.favorites-list {
+  margin-top: 50px;
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+
+  .favorite {
+    margin-bottom: 20px;
+
+    * {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 1.15em;
+      letter-spacing: 0.5px;
+
+      a {
+        color: $blue;
+      }
+    }
+  }
+}
