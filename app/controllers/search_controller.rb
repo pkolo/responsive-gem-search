@@ -1,7 +1,17 @@
 class SearchController < ApplicationController
 
   def create
-    render html: params[:q]
+    q = params[:q].downcase
+    search_results = Gems.search q
+
+    # Finds exact match
+    @result = search_results.find { |result| result["name"] == q }
+
+    if @result
+      render partial: 'result'
+    else
+      render partial: 'error'
+    end
   end
 
 end
