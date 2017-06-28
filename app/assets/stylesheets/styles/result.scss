@@ -1,28 +1,23 @@
 .result-wrapper {
   margin-top: 35px;
-  
+
   > * {
     margin-bottom: 30px;
   }
 }
 
 .result {
+  color: $blue;
+  font-size: 1.25em;
+  letter-spacing: 0.5px;
+  margin-right:5px;
+
   > * {
     display: inline-block;
   }
 
   &.dependency {
     margin-bottom: 10px;
-  }
-}
-
-.result-link {
-  font-size: 1.25em;
-  letter-spacing: 0.5px;
-  margin-right:5px;
-
-  a {
-     color: $blue;
   }
 }
 
