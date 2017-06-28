@@ -1,27 +1,32 @@
 <div class="result-wrapper">
   <div class="result">
-    <div class="result-link"><a href="#">test</a></div>
+    <div class="result-link">
+      <a href="<%= @result["homepage_uri"] %>" target="_blank"><%= @result["name"] %></a>
+    </div>
     <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
   </div>
   <div class="result-details">
     <div class="result-information">
       <h2>Information</h2>
-      <p>An automated web acceptance test framework for non-technical resources using selenium-wedriver.</p>
+      <p><%= @result["info"] %></p>
     </div>
     <div class="result-dependencies">
       <h2>Dependencies</h2>
-      <div class="result dependency">
-        <div class="result-link"><a href="#">test</a></div>
-        <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
-      </div>
-      <div class="result dependency">
-        <div class="result-link"><a href="#">test</a></div>
-        <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
-      </div>
-      <div class="result dependency">
-        <div class="result-link"><a href="#">test</a></div>
-        <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
-      </div>
+
+      <% @result["dependencies"]["development"].each do |dependency| %>
+        <div class="result dependency">
+          <div class="result-link"><%= dependency["name"] %></div>
+          <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
+        </div>
+      <% end %>
+
+      <% @result["dependencies"]["runtime"].each do |dependency| %>
+        <div class="result dependency">
+          <div class="result-link"><%= dependency["name"] %></div>
+          <%= image_submit_tag("star-gray.png", class: 'fav-btn') %>
+        </div>
+      <% end %>
+
     </div>
   </div>
 </div>
