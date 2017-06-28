@@ -1,3 +1,9 @@
 .sidebar {
-
+  height: 100vh;
+  width: 100%;
+  background: image-url('map.png');
+  padding-bottom: 62.5%; // ratio is 16:10
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

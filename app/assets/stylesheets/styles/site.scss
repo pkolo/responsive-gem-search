@@ -1,12 +1,25 @@
+// Bootstrap mods
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+// Overall styles
 body {
   font-family: $sans;
   color: $gray;
 }
 
 .site-main {
-  border: 1px solid black;
-}
-
-.site-sidebar {
   border: 1px solid black;
 }
