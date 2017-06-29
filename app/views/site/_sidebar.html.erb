@@ -5,10 +5,10 @@
     </div>
   </div>
   <div class="nav">
-    <div class="nav-i active">
+    <div class="nav-i <%= 'active' if current_page?(controller: 'static_pages', action: 'root') %>">
       <a href="/">Search</a>
     </div>
-    <div class="nav-i">
+    <div class="nav-i <%= 'active' if current_page?(controller: 'static_pages', action: 'favorites') %>">
       <a href="/favorites">Favorites</a>
     </div>
   </div>
