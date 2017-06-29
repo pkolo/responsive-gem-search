@@ -15,6 +15,10 @@ $offset-pad: 50px;
     padding-bottom: 25px;
     padding-right: $offset-pad;
 
+    &.error {
+      border-color: $error-red;
+    }
+
     .search-field {
       width: 90%;
     }
@@ -23,6 +27,10 @@ $offset-pad: 50px;
       border: none;
       font-size: 1em;
       color: $mid-gray;
+
+      &.error {
+        color: $error-red;
+      }
     }
 
     .search-btn {

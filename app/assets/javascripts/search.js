@@ -13,6 +13,17 @@ $(document).ready(function() {
       $('.result-wrapper').remove();
       $('.search-wrapper').append(res);
 
+      if ($('.result-error').length) {
+        $('.search-bar').addClass('error');
+        $('input').addClass('error');
+
+        $('input').on('focus', function(e) {
+          $('.search-bar').removeClass('error');
+          $(this).removeClass('error');
+          $(this).val('')
+        });
+      }
+
       var results = $('.search-wrapper').find('.result');
 
       $.each(results, function(i, dependency) {
