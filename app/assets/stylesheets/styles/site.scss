@@ -29,6 +29,12 @@ body {
   margin-left: 100px;
   padding-top: 175px;
 
+  h1 {
+    color: $gray;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+  }
+
   @media screen and (max-width: $break-small) {
     padding: 25px;
     margin-left: 0px;

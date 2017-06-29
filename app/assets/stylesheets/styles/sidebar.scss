@@ -29,7 +29,7 @@
     top: 50%;
 
     @media screen and (max-width: $break-small) {
-      top: 40px;
+      top: 53px;
 
       > * {
         display: inline-block;
@@ -38,9 +38,13 @@
 
     .nav-i {
       width: 125px;
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       padding-left: 20px;
+
+      @media screen and (max-width: $break-small) {
+        padding-left: 0px;
+      }
 
       a {
         text-align: left;
