@@ -15,6 +15,10 @@ body {
   max-width: 1920px;
   font-family: $sans;
   color: $gray;
+
+  @media screen and (max-width: $break-small) {
+    text-align: center;
+  }
 }
 
 .site-main {
@@ -24,4 +28,10 @@ body {
   width: 80%;
   margin-left: 100px;
   padding-top: 175px;
+
+  @media screen and (max-width: $break-small) {
+    padding-top: 25px;
+    margin-left: 0px;
+    width: 100%;
+  }
 }

@@ -7,15 +7,33 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media screen and (max-width: $break-small) {
+    height: 150px;
+    padding-bottom: 0px;
+    background-position: 35% 35%;
+  }
+
   .logo {
     text-align: right;
     padding: 25px 35px;
+
+    @media screen and (max-width: $break-small) {
+      padding-top: 10px;
+    }
   }
 
   .nav {
     float: right;
     position: relative;
     top: 50%;
+
+    @media screen and (max-width: $break-small) {
+      top: 0%;
+
+      > * {
+        display: inline-block;
+      }
+    }
 
     .nav-i {
       width: 125px;
