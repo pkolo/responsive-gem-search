@@ -15,6 +15,11 @@ $(document).ready(function() {
 
   $('.favorites-list').append(favList);
 
+  $('.favorites-list').on('click', '.fav-btn', function(e) {
+    var gem = $(this).siblings('.favorite-link');
+    removeFav(gem);
+    $(this).parent().remove();
+  })
 
   $('.search-wrapper').on('click', '.fav-btn', function(e) {
     var gem = $(this).siblings('.result-link');
@@ -34,13 +39,16 @@ $(document).ready(function() {
 
   var toggleFav = function(gem) {
     var gemName = gem[0].innerText;
+    var btn = gem.siblings('.fav-btn');
     var favorites = JSON.parse(localStorage.getItem('favorites'));
     var match = favorites.find( fav => (fav.name == gemName) )
 
     if (match) {
       removeFav(gem);
+      btn.attr('src', '/assets/star-gray.png')
     } else {
       addFav(gem);
+      btn.attr('src', '/assets/star-blue.png')
     }
   }
 
@@ -52,11 +60,6 @@ $(document).ready(function() {
     favorites.push(gemData)
 
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    var btn = gem.siblings('.fav-btn');
-    btn.attr('src', '/assets/star-blue.png')
-
-    console.log(gemName, 'added');
-    console.log( favorites );
   }
 
   var removeFav = function(gem) {
@@ -65,11 +68,6 @@ $(document).ready(function() {
     var newFavorites = favorites.filter( fav => ( fav.name != gemName) );
 
     localStorage.setItem('favorites', JSON.stringify(newFavorites)) ;
-    var btn = gem.siblings('.fav-btn');
-    btn.attr('src', '/assets/star-gray.png')
-
-    console.log(gemName, 'removed');
-    console.log( newFavorites );
   }
 
 });
