@@ -7,10 +7,10 @@ $offset-pad: 50px;
   }
 
   .search-bar {
-    max-width: 80%;
+    max-width: $search-width;
     border: 1px solid $mid-gray;
     border-radius: 100px;
-    margin-top: 35px;
+    margin-top: 40px;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-right: $offset-pad;
