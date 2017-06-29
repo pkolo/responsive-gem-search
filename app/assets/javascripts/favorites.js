@@ -1,25 +1,28 @@
 $(document).ready(function() {
 
-  var buildFavs = function(fav) {
-    var favorites = JSON.parse(localStorage.getItem('favorites'));
-    return(`
-      <div class="favorite">
-        <input alt="Star blue" type="image" src="/assets/star-blue.png" class="fav-btn" />
-        <div class="favorite-link"><a href="${fav.link}">${fav.name}</a></div>
-      </div>
-    `)
+  if ($('.favorites-list').length) {
+
+    var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    var buildFavs = function(fav) {
+      return(`
+        <div class="favorite">
+          <input alt="Star blue" type="image" src="/assets/star-blue.png" class="fav-btn" />
+          <div class="favorite-link"><a href="${fav.link}">${fav.name}</a></div>
+        </div>
+      `)
+    }
+
+    var favList = favorites.map( f => buildFavs(f) );
+
+    $('.favorites-list').append(favList);
+
+    $('.favorites-list').on('click', '.fav-btn', function(e) {
+      var gem = $(this).siblings('.favorite-link');
+      removeFav(gem);
+      $(this).parent().remove();
+    })
+
   }
-
-  var favorites = JSON.parse(localStorage.getItem('favorites'));
-  var favList = favorites.map( f => buildFavs(f) );
-
-  $('.favorites-list').append(favList);
-
-  $('.favorites-list').on('click', '.fav-btn', function(e) {
-    var gem = $(this).siblings('.favorite-link');
-    removeFav(gem);
-    $(this).parent().remove();
-  })
 
   $('.search-wrapper').on('click', '.fav-btn', function(e) {
     var gem = $(this).siblings('.result-link');
@@ -34,7 +37,7 @@ $(document).ready(function() {
   var initFavs = function(gem) {
     var favGems = [];
     localStorage.setItem('favorites', JSON.stringify(favGems));
-    addFav(gem);
+    toggleFav(gem);
   }
 
   var toggleFav = function(gem) {
