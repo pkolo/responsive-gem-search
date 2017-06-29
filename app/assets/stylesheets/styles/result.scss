@@ -57,4 +57,9 @@
   font-size: 1.5em;
   line-height: 1.6em;
   letter-spacing: 0.04em;
+
+  @media screen and (max-width: $break-small) {
+    margin: 0;
+    max-width: 100%;
+  }
 }
