@@ -7,7 +7,7 @@ $(document).ready(function() {
       return(`
         <div class="favorite">
           <input alt="Star blue" type="image" src="/assets/star-blue.png" class="fav-btn" />
-          <div class="favorite-link"><a href="${fav.link}">${fav.name}</a></div>
+          <div class="favorite-link"><a href="${fav.link}" target="_blank">${fav.name}</a></div>
         </div>
       `)
     }
