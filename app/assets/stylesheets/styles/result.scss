@@ -7,10 +7,13 @@
 }
 
 .result {
-  color: $blue;
   font-size: 1.25em;
   letter-spacing: 0.5px;
   margin-right:5px;
+
+  a {
+    color: $blue;
+  }
 
   > * {
     display: inline-block;
@@ -26,7 +29,7 @@
   max-width: 60%;
   text-align: justify;
   line-height: 1.5em;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 
   @media screen and (max-width: $break-small) {
     max-width: 100%;

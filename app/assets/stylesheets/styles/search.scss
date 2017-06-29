@@ -20,6 +20,11 @@ $offset-pad: 50px;
     padding-bottom: 25px;
     padding-right: $offset-pad;
 
+    @media screen and (max-width: $break-lg) {
+      max-width: 85%;
+      padding: 25px;
+    }
+
     @media screen and (max-width: $break-small) {
       max-width: 100%;
       padding: 25px;
