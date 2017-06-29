@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+  var buildFavs = function(fav) {
+    var favorites = JSON.parse(localStorage.getItem('favorites'));
+    return(`
+      <div class="favorite">
+        <input alt="Star blue" type="image" src="/assets/star-blue.png" class="fav-btn" />
+        <div class="favorite-link"><a href="${fav.link}">${fav.name}</a></div>
+      </div>
+    `)
+  }
+
+  var favorites = JSON.parse(localStorage.getItem('favorites'));
+  var favList = favorites.map( f => buildFavs(f) );
+
+  $('.favorites-list').append(favList);
+
+
   $('.search-wrapper').on('click', '.fav-btn', function(e) {
     var gem = $(this).siblings('.result-link');
 
