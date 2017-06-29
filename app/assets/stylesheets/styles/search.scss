@@ -36,6 +36,10 @@ $offset-pad: 50px;
 
     .search-field {
       width: 90%;
+
+      @media screen and (max-width: $break-tiny) {
+        max-width: 75%;
+      }
     }
 
     input {
