@@ -16,11 +16,14 @@ $(document).ready(function() {
       if ($('.result-error').length) {
         $('.search-bar').addClass('error');
         $('input').addClass('error');
+        $('.search-btn').attr('src', '/assets/magnifying-glass-red.png')
 
         $('input').on('focus', function(e) {
           $('.search-bar').removeClass('error');
           $(this).removeClass('error');
+          $('.search-btn').attr('src', '/assets/magnifying-glass.png')
           $(this).val('')
+          $('.result-error').remove()
         });
       }
 
